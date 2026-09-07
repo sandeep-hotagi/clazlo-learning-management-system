@@ -4,7 +4,7 @@
 const express = require('express');
 const router = express.Router();
 const Feedback = require('../models/Feedback');
-const authMiddleware = require('../middleware/auth'); // assumes existing auth middleware
+const { authMiddleware } = require('../middleware/auth');
 const roleCheck = require('../middleware/roleCheck'); // helper to enforce role, create if missing
 
 // Helper to enforce that user has appropriate role for a route
